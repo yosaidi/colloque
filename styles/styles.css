@@ -1,0 +1,283 @@
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #236830 0%, #1c5425 100%);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 5px solid #236830;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #1c5425 0%, #236830 100%);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    flex-grow: 1;
+}
+nav ul li {
+    margin-right: 20px; /* Adds space between the menu items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Removes space on the last menu item */
+}
+nav ul li a {
+    color: white !important;  /* Ensures the links are white */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1c5425;
+    transform: scale(1.1);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+
+
+/* Variables */
+/* Body Styles */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+body {
+  background-color: #236830;
+  font: 14px/1.42857143 'Lato', sans-serif;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.06em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.head {
+  margin-top: 70px;
+  margin-bottom: 70px; }
+  .head h1 {
+    font-size: 35px;
+    text-transform: uppercase; }
+  .head h2 {
+    font-weight: normal; }
+  .head a {
+    color: #D92B4C;
+    text-decoration: none; }
+    .head a:hover {
+      text-decoration: underline; }
+
+/* Angled Images */
+.angled-img {
+  position: relative;
+  display: block;
+  shape-outside: polygon(9% 0, 0 100%, 91% 100%, 100% 0%); }
+  .angled-img, .angled-img:hover, .angled-img:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none; }
+  .angled-img .img {
+    border-bottom: 5px solid #236830;
+
+    position: relative;
+    overflow: hidden;
+    transform: skew(-8deg);
+    transform-origin: 50% 50%;
+    background: #131313;
+    -webkit-backface-visibility: hidden; }
+    .angled-img .img > img {
+      width: 100%;
+      transform: skew(8deg) scale(1.15);
+      transition: .3s opacity ease;
+      -webkit-backface-visibility: hidden;
+      opacity: 0.6; }
+  .angled-img:hover .img > img {
+    opacity: 0.9; }
+
+/* Carousel */
+.youplay-carousel .angled-img {
+  margin-left: -1px;
+
+}
+
+.youplay-carousel .owl-nav {
+
+  margin: 0; }
+  .youplay-carousel .owl-nav .owl-prev,
+  .youplay-carousel .owl-nav .owl-next {
+    position: absolute;
+    cursor: pointer;
+    font-size: 2rem;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    transition: .3s opacity ease;
+    opacity: 1;
+    margin: 0;
+    padding: 0; }
+    .youplay-carousel .owl-nav .owl-prev:hover,
+    .youplay-carousel .owl-nav .owl-next:hover {
+      opacity: 0.8; }
+  .youplay-carousel .owl-nav .owl-prev,
+  .youplay-carousel .owl-nav .owl-prev:hover {
+    left: 0;
+    background: linear-gradient(to right, #131313, rgba(19, 19, 19, 0)); }
+  .youplay-carousel .owl-nav .owl-next,
+  .youplay-carousel .owl-nav .owl-next:hover {
+    right: -0.1px;
+    background: linear-gradient(to left, #131313, rgba(19, 19, 19, 0)); }
+improve the best look out of this page
+/* Buttons */
+.link-button {
+    background-color: #236830;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.link-button:hover {
+    background-color: #1c5425;
+    transform: scale(1.05);
+}
+
+/* Colloque Introduction Section */
+.colloque-intro {
+    background-color: #f9f9f9;
+    background-image: url('../images/colloque-abt-bg.png');  /* Add a background image */
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 5px solid #236830;
+    padding: 80px 0;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.colloque-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.colloque-intro .container {
+    position: relative;
+    z-index: 2;
+}
+
+.colloque-intro .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
+}
+
+.colloque-intro .lead {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.colloque-intro .link-button {
+    background-color: #236830;
+    color: white;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-out;
+}
+
+.colloque-intro .link-button:hover {
+    background-color: #1c5425;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(135deg, #236830 0%, #1c5425 100%);
+
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #1c5425;
+    transform: scale(1.2); /* Adds a nice scaling effect when hovered */
+}
+
+footer .social-icons a:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adds a subtle glow when focused */
+}
+
