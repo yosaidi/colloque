@@ -46,31 +46,31 @@
 
     <section class="about-page">
         <div class="container">
-            <h2>Introduction</h2>
-            <p>Le Colloque International sur l'Économie Sociale et Solidaire organisé par l'ENCG Oujda est une plateforme dédiée à l'exploration des solutions innovantes pour un développement intégré et durable.</p>
+            <h2 class="title-toggle" >Introduction</h2>
+            <p class="description">Le Colloque International sur l'Économie Sociale et Solidaire organisé par l'ENCG Oujda est une plateforme dédiée à l'exploration des solutions innovantes pour un développement intégré et durable.</p>
 
-            <h2>Objectifs</h2>
-            <ul>
+            <h2  class="title-toggle">Objectifs</h2>
+            <ul class="description">
                 <li>Explorer les défis et opportunités de l'économie sociale et solidaire.</li>
                 <li>Promouvoir le dialogue entre chercheurs, praticiens et décideurs.</li>
                 <li>Identifier des solutions pratiques pour un développement durable.</li>
             </ul>
 
-            <h2>Pourquoi ce colloque ?</h2>
-            <p>Dans un monde confronté à des défis économiques et sociaux croissants, l'économie sociale et solidaire offre des solutions concrètes pour renforcer la résilience des communautés, réduire les inégalités, et promouvoir une croissance durable.</p>
+            <h2  class="title-toggle">Pourquoi ce colloque ?</h2>
+            <p class="description">Dans un monde confronté à des défis économiques et sociaux croissants, l'économie sociale et solidaire offre des solutions concrètes pour renforcer la résilience des communautés, réduire les inégalités, et promouvoir une croissance durable.</p>
 
-            <h2>Détails de l'Événement</h2>
-            <p><strong>Lieu :</strong> École Nationale de Commerce et de Gestion, Oujda</p>
-            <p><strong>Format :</strong> Conférences, ateliers, et networking</p>
+            <h2  class="title-toggle">Détails de l'Événement</h2>
+            <p class="description"><strong>Lieu :</strong> École Nationale de Commerce et de Gestion, Oujda</p>
+            <p class="description"><strong>Format :</strong> Conférences, ateliers, et networking</p>
 
-            <h2>Public Cible</h2>
-            <p>Le colloque est ouvert aux chercheurs, étudiants, acteurs économiques, responsables politiques, et toute personne intéressée par l'économie sociale et solidaire.</p>
+            <h2  class="title-toggle">Public Cible</h2>
+            <p class="description">Le colloque est ouvert aux chercheurs, étudiants, acteurs économiques, responsables politiques, et toute personne intéressée par l'économie sociale et solidaire.</p>
 
-            <h2>Organisateurs</h2>
-            <p>Ce colloque est organisé par l'ENCG Oujda, avec le soutien de partenaires locaux et internationaux engagés pour la promotion de l'économie sociale et solidaire.</p>
+            <h2  class="title-toggle">Organisateurs</h2>
+            <p class="description">Ce colloque est organisé par l'ENCG Oujda, avec le soutien de partenaires locaux et internationaux engagés pour la promotion de l'économie sociale et solidaire.</p>
 
-            <h2>Rejoignez-nous</h2>
-            <p>Rejoignez-nous pour cet événement unique qui promet d'inspirer, de connecter, et de catalyser l'innovation dans l'économie sociale et solidaire.</p>
+            <h2  class="title-toggle">Rejoignez-nous</h2>
+            <p class="description">Rejoignez-nous pour cet événement unique qui promet d'inspirer, de connecter, et de catalyser l'innovation dans l'économie sociale et solidaire.</p>
         </div>
     </section>
 
@@ -94,6 +94,20 @@
             once: true, // Only animate once
         });
     </script>
-
+    <script>
+        document.querySelectorAll('.title-toggle').forEach(title => {
+            title.addEventListener('click', () => {
+                const description = title.nextElementSibling;
+    
+                // Toggle the "active" class
+                if (description.classList.contains('active')) {
+                    description.classList.remove('active');
+                } else {
+                    description.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>

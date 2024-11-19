@@ -127,6 +127,7 @@ margin-bottom: 70px; }
 
 /* Angled Images */
 .angled-img {
+  
 position: relative;
 display: block;
 shape-outside: polygon(9% 0, 0 100%, 91% 100%, 100% 0%); }
@@ -152,39 +153,6 @@ shape-outside: polygon(9% 0, 0 100%, 91% 100%, 100% 0%); }
 .angled-img:hover .img > img {
   opacity: 0.9; }
 
-/* Carousel */
-.youplay-carousel .angled-img {
-margin-left: -1px;
-
-}
-
-.youplay-carousel .owl-nav {
-
-margin: 0; }
-.youplay-carousel .owl-nav .owl-prev,
-.youplay-carousel .owl-nav .owl-next {
-  position: absolute;
-  cursor: pointer;
-  font-size: 2rem;
-  top: 0;
-  height: 100%;
-  width: 70px;
-  transition: .3s opacity ease;
-  opacity: 1;
-  margin: 0;
-  padding: 0; }
-  .youplay-carousel .owl-nav .owl-prev:hover,
-  .youplay-carousel .owl-nav .owl-next:hover {
-    opacity: 0.8; }
-.youplay-carousel .owl-nav .owl-prev,
-.youplay-carousel .owl-nav .owl-prev:hover {
-  left: 0;
-  background: linear-gradient(to right, #131313, rgba(19, 19, 19, 0)); }
-.youplay-carousel .owl-nav .owl-next,
-.youplay-carousel .owl-nav .owl-next:hover {
-  right: -0.1px;
-  background: linear-gradient(to left, #131313, rgba(19, 19, 19, 0)); }
-improve the best look out of this page
 /* Buttons */
 .link-button {
   background-color: #236830;
@@ -294,6 +262,7 @@ improve the best look out of this page
 footer {
   background: linear-gradient(135deg, #236830 0%, #1c5425 100%);
   border-top: 5px solid #236830;
+  border-bottom: 5px solid #236830;
 
   color: white;
   padding: 40px 0;
@@ -350,6 +319,32 @@ footer .social-icons a:focus {
   margin-bottom: 5px;
 }
 
+/* Hide descriptions by default */
+.description {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show descriptions when active */
+.description.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cursor pointer for clickable titles */
+.title-toggle {
+  cursor: pointer;
+  color: #236830;
+  transition: color 0.3s;
+}
+
+.title-toggle:hover {
+  color: #1b4f26;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .about-section .section-title {
@@ -360,26 +355,7 @@ footer .social-icons a:focus {
   }
 }
 
-/* Header */
-header {
-background-color: #236830;
-border-bottom: 4px solid #1a4c24;
-}
 
-header a.navbar-brand {
-font-size: 1.5rem;
-font-weight: bold;
-}
-
-header a.nav-link {
-font-size: 1rem;
-padding: 0.5rem 1rem;
-transition: color 0.3s ease;
-}
-
-header a.nav-link:hover {
-color: #cce7d5;
-}
 
 /* Hero Section */
 section.bg-light {
@@ -399,13 +375,7 @@ section.bg-success {
 background-color: #236830;
 color: #ffffff;
 }
-.moments-forts{
-background-color: #1c5425;
-color: #ffffff;
-border-bottom: 5px solid #236830;
 
-
-}
 section.bg-success h2 {
 font-size: 2rem;
 margin-bottom: 2rem;
@@ -459,64 +429,35 @@ border-bottom: 5px solid #236830;
 
 }
 
-/* Swiper Carousel Styles */
-.swiper {
-width: 100%;
-height: 100%;
-padding: 20px 0;
+/* Carousel */
+.youplay-carousel .angled-img {
+margin-left: -1px;
+
 }
 
-.swiper-slide {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
+.youplay-carousel .owl-nav {
 
-.swiper-slide img {
-width: 100%;
-max-height: 400px;
-object-fit: cover;
-border-radius: 15px;
-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.swiper-slide p {
-margin-top: 10px;
-font-size: 1rem;
-color: #555;
-}
-
-/* Navigation Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-color: #236830;
-background-color: rgba(255, 255, 255, 0.7);
-border-radius: 50%;
-padding: 10px;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-background-color: #236830;
-color: #fff;
-}
-
-/* Pagination Dots */
-.swiper-pagination-bullet {
-background: #236830;
-opacity: 0.7;
-}
-
-.swiper-pagination-bullet-active {
-background: #236830;
-opacity: 1;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-.swiper-slide img {
-    max-height: 250px;
-}
-}
+margin: 0; }
+.youplay-carousel .owl-nav .owl-prev,
+.youplay-carousel .owl-nav .owl-next {
+  position: absolute;
+  cursor: pointer;
+  font-size: 2rem;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  transition: .3s opacity ease;
+  opacity: 1;
+  margin: 0;
+  padding: 0; }
+  .youplay-carousel .owl-nav .owl-prev:hover,
+  .youplay-carousel .owl-nav .owl-next:hover {
+    opacity: 0.8; }
+.youplay-carousel .owl-nav .owl-prev,
+.youplay-carousel .owl-nav .owl-prev:hover {
+  left: 0;
+  background: linear-gradient(to right, #131313, rgba(19, 19, 19, 0)); }
+.youplay-carousel .owl-nav .owl-next,
+.youplay-carousel .owl-nav .owl-next:hover {
+  right: -0.1px;
+  background: linear-gradient(to left, #131313, rgba(19, 19, 19, 0)); }
