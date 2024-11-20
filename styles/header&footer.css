@@ -1,0 +1,139 @@
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #236830 0%, #1c5425 100%);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 5px solid #236830;
+  }
+  
+  header:hover {
+    background: linear-gradient(135deg, #1c5425 0%, #236830 100%);
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    flex-grow: 1;
+  }
+  nav ul li {
+    margin-right: 20px; /* Adds space between the menu items */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Removes space on the last menu item */
+  }
+  nav ul li a {
+    color: white !important;  /* Ensures the links are white */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #1c5425;
+    transform: scale(1.1);
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 100%;
+  }
+  
+  /* Navbar Toggler */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+   
+  }
+  
+  /* Collapsed Menu */
+  .collapse {
+    border-radius: 5px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0 5px;
+  }
+  
+  /* Responsive Design Tweaks */
+  @media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+        padding: 10px;
+        border-bottom: 1px solid #ffffff;
+    }
+  
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+  }
+  /* Footer Section */
+  footer {
+    background: linear-gradient(135deg, #236830 0%, #1c5425 100%);
+    border-top: 5px solid #236830;
+    border-bottom: 5px solid #236830;
+  
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  footer .social-icons {
+    margin-top: 20px;
+  }
+  
+  footer .social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  footer .social-icons a:hover {
+    color: #1c5425;
+    transform: scale(1.2); /* Adds a nice scaling effect when hovered */
+  }
+  
+  footer .social-icons a:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adds a subtle glow when focused */
+  }
